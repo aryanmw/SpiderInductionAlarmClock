@@ -1,0 +1,464 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202125"
+    tools:context=".Alarm.CreateAlarm">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/rel_np"
+            android:layout_marginTop="60dp">
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:solidColor="#202125"
+                android:theme="@style/AppTheme.Picker"
+                android:id="@+id/np_hours"/>
+            <NumberPicker
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:solidColor="#202125"
+                android:theme="@style/AppTheme.Picker"
+                android:layout_toRightOf="@id/np_hours"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/np_mins"/>
+
+        </RelativeLayout>
+
+
+        <Button
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rel_np"
+            android:text="Set Alarm"
+            android:textColor="#ffffff"
+            android:background="@drawable/button"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/set_button"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/set_button"
+            android:textSize="30dp"
+            tools:text="Alarm is set for whatever"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:textColor="#fff"
+            android:layout_alignParentTop="true"
+            android:id="@+id/tv_setTime"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:id="@+id/ll_days"
+            android:layout_below="@id/set_button">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:id="@+id/cv_mon"
+                app:cardBackgroundColor="#C99806"
+
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:cardCornerRadius="45dp"
+                        app:cardBackgroundColor="#202125"
+                        android:id="@+id/cv_monIn"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="MON"
+                            android:textSize="11dp"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:id="@+id/cv_tue"
+                app:cardBackgroundColor="#C99806"
+                android:layout_marginLeft="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:cardCornerRadius="45dp"
+                        app:cardBackgroundColor="#202125"
+                        android:layout_centerInParent="true"
+                        android:id="@+id/cv_tueIn"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="TUE"
+                            android:textSize="11dp"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:id="@+id/cv_wed"
+                app:cardBackgroundColor="#C99806"
+                android:layout_marginLeft="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:cardCornerRadius="45dp"
+                        app:cardBackgroundColor="#202125"
+                        android:id="@+id/cv_wedIn"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="WED"
+                            android:textSize="11dp"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:id="@+id/cv_thu"
+                app:cardBackgroundColor="#C99806"
+                android:layout_marginLeft="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:cardCornerRadius="45dp"
+                        android:id="@+id/cv_thuIn"
+                        app:cardBackgroundColor="#202125"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="THU"
+                            android:textSize="11dp"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:id="@+id/cv_fri"
+                app:cardBackgroundColor="#C99806"
+                android:layout_marginLeft="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:cardCornerRadius="45dp"
+                        android:id="@+id/cv_friIn"
+                        app:cardBackgroundColor="#202125"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="FRI"
+                            android:textSize="11dp"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:id="@+id/cv_sat"
+                app:cardBackgroundColor="#C99806"
+                android:layout_marginLeft="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:cardCornerRadius="45dp"
+                        app:cardBackgroundColor="#202125"
+                        android:id="@+id/cv_satIn"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="SAT"
+                            android:textSize="11dp"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                app:cardCornerRadius="50dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginTop="15dp"
+                android:id="@+id/cv_sun"
+                app:cardBackgroundColor="#C99806"
+                android:layout_marginLeft="10dp"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="35dp"
+                        android:layout_height="35dp"
+                        app:cardCornerRadius="45dp"
+                        android:id="@+id/cv_sunIn"
+                        app:cardBackgroundColor="#202125"
+                        android:layout_centerInParent="true"
+                        >
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:text="SUN"
+                            android:textSize="11dp"
+                            android:layout_marginTop="10dp"
+                            android:textAlignment="center"
+                            android:textColor="#ffffff" />
+
+                    </androidx.cardview.widget.CardView>
+                </RelativeLayout>
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="330dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:id="@+id/rl_ringTone"
+            android:layout_below="@id/ll_days">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Choose alarm ringtone"
+                android:layout_alignParentLeft="true"
+                android:textColor="#fff"
+                android:textSize="20dp"
+                android:id="@+id/tone"/>
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@id/tone"
+                android:layout_marginTop="30dp">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    app:cardBackgroundColor="#C99806"
+                    android:id="@+id/cv_default"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Default"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="20dp"
+                        android:textSize="19dp"
+                        android:layout_marginTop="7dp"/>
+
+                </androidx.cardview.widget.CardView>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="100dp"
+                    android:layout_height="40dp"
+                    app:cardBackgroundColor="#36373B"
+                    android:id="@+id/cv_school"
+                    android:layout_marginLeft="20dp"
+                    android:layout_toRightOf="@id/cv_default"
+                    app:cardCornerRadius="20dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Bell"
+                        android:textColor="#fff"
+                        android:textAlignment="center"
+                        android:layout_marginLeft="35dp"
+                        android:textSize="19dp"
+                        android:layout_marginTop="7dp"/>
+
+                </androidx.cardview.widget.CardView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rl_ringTone"
+            android:id="@+id/rl_qsn"
+            android:visibility="invisible"
+            android:layout_centerHorizontal="true">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                tools:text="Question:"
+                android:textColor="#5f5f5f"
+                android:id="@+id/q"
+                android:layout_marginTop="20dp"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="25dp"
+                tools:text="100*2"
+                android:textColor="#fff"
+                android:layout_toRightOf="@id/q"
+                android:layout_marginLeft="20dp"
+                android:id="@+id/tv_question"
+                android:layout_marginTop="20dp"/>
+
+            <EditText
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/q"
+                android:textColor="#fff"
+                android:hint="Answer"
+                android:backgroundTint="#ffffff"
+                android:textColorHint="#5f5f5f"
+                android:id="@+id/et_answer"
+                android:inputType="number"/>
+
+
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="100dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="60dp"
+            android:text="Stop"
+            android:textColor="#ffffff"
+            android:background="@drawable/button"
+            android:layout_above="@id/bottom_navigation"
+            android:id="@+id/button_enter"
+            android:layout_centerHorizontal="true"/>
+
+
+
+
+
+
+
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottom_navigation"
+            android:layout_width="match_parent"
+            android:layout_height="58dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="10dp"
+            android:background="#272829"
+            app:itemIconTint="#5f5f5f"
+            app:itemTextColor="#5f5f5f"
+            app:labelVisibilityMode="labeled"
+            app:menu="@menu/bottom_navigation" />
+
+    </RelativeLayout>
+
+
+
+
+</RelativeLayout>

@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#202125"
+    tools:context=".Timer.TimerMain">
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/rel_np"
+        android:layout_marginTop="60dp"
+        android:layout_centerHorizontal="true">
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/np_timer_mins"
+            android:theme="@style/AppTheme.Picker"
+            android:solidColor="#202125"
+            />
+        <NumberPicker
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/np_timer_secs"
+            android:theme="@style/AppTheme.Picker"
+            android:solidColor="#202125"
+            android:layout_toRightOf="@id/np_timer_mins"
+            android:layout_marginLeft="10dp"/>
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="110dp"
+        android:id="@+id/rel_tv"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="60sp"
+            android:visibility="invisible"
+            android:text="00"
+            android:textColor="#eeeeed"
+            android:id="@+id/tv_mins"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/progressBar"
+        android:layout_marginTop="100dp">
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+           android:background="@drawable/button"
+            android:textColor="#ffffff"
+            android:id="@+id/timer_button_start"
+            android:text="start"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/timer_button_stop"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="20dp"
+            android:layout_toRightOf="@id/timer_button_start"
+            android:text="Stop"
+             />
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/button"
+            android:textColor="#ffffff"
+            android:layout_toRightOf="@id/timer_button_start"
+            android:text="Reset"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/button_timer_reset"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <ProgressBar
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:indeterminateOnly="false"
+        android:progressDrawable="@drawable/circle"
+        android:layout_centerHorizontal="true"
+        android:id="@+id/progressBar"/>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_navigation"
+        android:layout_width="match_parent"
+        android:layout_height="58dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="10dp"
+        android:background="#272829"
+        app:itemIconTint="#5f5f5f"
+        app:itemTextColor="#5f5f5f"
+        app:labelVisibilityMode="labeled"
+        app:menu="@menu/bottom_navigation" />
+
+</RelativeLayout>
